@@ -1,0 +1,10 @@
+<div class="field field--textarea">
+    <label class="field__label" for="{{.name}}">{{.label}}</label>
+    <textarea
+        class="field__input"
+        id="{{.name}}"
+        name="{{.name}}"
+        type='{{.type | default "text"}}'
+        {{if .autocomplete}}autocomplete="{{.autocomplete}}"{{end}}
+    ></textarea>
+</div>

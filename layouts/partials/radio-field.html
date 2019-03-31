@@ -1,0 +1,26 @@
+<fieldset class="field field--radio">
+    <legend class="field__label">
+        {{.label}}
+    </legend>
+    {{range .options}}
+    <label class="field__radio{{if .text}} field__radio--text{{end}}">
+        <input
+            class="field__input"
+            name="{{$.name}}"
+            value="{{.value}}"
+            type="{{$.type}}"
+        />
+        {{if .text}}
+        <input
+            type="text"
+            name="{{.value}}"
+            disabled
+            placeholder="{{.label | default .value}}"
+            aria-label="{{.label | default .value}}"
+        />
+        {{else}}
+        {{.label | default .value}}
+        {{end}}
+    </label>
+    {{end}}
+</fieldset>
