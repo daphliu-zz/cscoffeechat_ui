@@ -9,6 +9,7 @@
             name="{{$.name}}"
             value="{{.value}}"
             type="{{$.type}}"
+            {{if eq $.type "radio"}}required{{end}}
         />
         {{if .text}}
         <input
@@ -16,6 +17,7 @@
             type="text"
             name="{{.value}}"
             disabled
+            required
             placeholder="{{.label | default .value}}"
             aria-label="{{.label | default .value}}"
         />
