@@ -1,8 +1,10 @@
 {{define "head"}}
+<link rel="stylesheet" href="../css/style.css">
 <script type="module" src="../js/other-input.js"></script>
 {{end}}
 
 {{define "main"}}
+<img class="splash" src="../splash.png" alt="">
 <form class="sign-up-form">
     {{range .Params.form}}
     {{if or (eq .type "radio") (eq .type "checkbox")}}
@@ -13,5 +15,8 @@
     {{partial "text-field.html" .}}
     {{end}}
     {{end}}
+    <button type="submit" class="submit">
+        Submit!
+    </button>
 </form>
 {{end}}

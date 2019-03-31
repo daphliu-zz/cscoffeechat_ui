@@ -62,5 +62,6 @@ form:
             text: true
     - type: text
       name: other-prefs
-      label: Do you have other preference to your matching? (background, orientation .. etc)
+      label: Do you have other preference to your matching?
+      placeholder: background, orientation, ...etc
 ---
