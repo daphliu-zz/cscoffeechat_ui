@@ -9,6 +9,8 @@
         {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
         {{ end }}
     </title>
+    {{ block "head" . }}
+    {{ end }}
 </head>
 
 <body>
